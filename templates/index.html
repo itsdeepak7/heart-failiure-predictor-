@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Failure Prediction</title>
+</head>
+<body>
+    <h2>Enter Patient Information:</h2>
+    <form method="POST" action="/predict">
+        Age: <input name="age"><br>
+        Anaemia (1/0): <input name="anaemia"><br>
+        High BP (1/0): <input name="high_blood_pressure"><br>
+        Creatinine Phosphokinase: <input name="creatinine_phosphokinase"><br>
+        Diabetes (1/0): <input name="diabetes"><br>
+        Ejection Fraction: <input name="ejection_fraction"><br>
+        Sex (1=Male, 0=Female): <input name="sex"><br>
+        Platelets: <input name="platelets"><br>
+        Smoking (1/0): <input name="smoking"><br>
+        Time: <input name="time"><br>
+        Serum Creatinine: <input 
+        name="serum_creatinine"><br>
+        Serum Sodium: <input 
+        name="serum_sodium"><br>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
